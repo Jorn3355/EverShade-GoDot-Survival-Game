@@ -559,3 +559,10 @@ frame_progress = 0.385639
 [node name="player-hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_u6pgd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
+limit_left = -440
+limit_top = -272
+limit_right = 998
+limit_bottom = 353
