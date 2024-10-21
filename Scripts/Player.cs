@@ -31,14 +31,15 @@ public partial class Player : CharacterBody2D
 
 	public void playAnims(Vector2 dir)
 	{
-		AnimatedSprite2D Sprite = GetNode<AnimatedSprite2D>("AnimSprite");
+		AnimatedSprite2D Sprite = GetNode<AnimatedSprite2D>("player-sprite");
 		switch (playerState)
 		{
 			case "Idle":
 				Sprite.Play("Idle");
 				break;
 			case "walking":
-				switch(dir.X) {
+				switch (dir.X)
+				{
 					case 1:
 						Sprite.Play("R-walk");
 						break;
@@ -46,7 +47,8 @@ public partial class Player : CharacterBody2D
 						Sprite.Play("L-walk");
 						break;
 				}
-				switch(dir.Y) {
+				switch (dir.Y)
+				{
 					case 1:
 						Sprite.Play("D-walk");
 						break;
@@ -66,11 +68,13 @@ public partial class Player : CharacterBody2D
 				{
 					Sprite.Play("DL-walk");
 				}
-				else if (dir.X < -0.5 && dir.Y < -0.5) {
+				else if (dir.X < -0.5 && dir.Y < -0.5)
+				{
 					Sprite.Play("UL-walk");
 				}
 
 				break;
 		}
 	}
+	public void player(){}
 }
